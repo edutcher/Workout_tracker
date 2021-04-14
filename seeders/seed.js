@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGOD_URI, {
 });
 
 let workoutSeed = [{
-        day: new Date().setDate(new Date().getDate() - 10),
+        day: new Date(new Date().setDate(new Date().getDate() - 10)),
         exercises: [{
             type: "resistance",
             name: "Bicep Curl",
@@ -19,7 +19,7 @@ let workoutSeed = [{
         }]
     },
     {
-        day: new Date().setDate(new Date().getDate() - 9),
+        day: new Date(new Date().setDate(new Date().getDate() - 9)),
         exercises: [{
             type: "resistance",
             name: "Lateral Pull",
@@ -30,7 +30,7 @@ let workoutSeed = [{
         }]
     },
     {
-        day: new Date().setDate(new Date().getDate() - 8),
+        day: new Date(new Date().setDate(new Date().getDate() - 8)),
         exercises: [{
             type: "resistance",
             name: "Push Press",
@@ -41,7 +41,7 @@ let workoutSeed = [{
         }]
     },
     {
-        day: new Date().setDate(new Date().getDate() - 7),
+        day: new Date(new Date().setDate(new Date().getDate() - 7)),
         exercises: [{
             type: "cardio",
             name: "Running",
@@ -50,7 +50,7 @@ let workoutSeed = [{
         }]
     },
     {
-        day: new Date().setDate(new Date().getDate() - 6),
+        day: new Date(new Date().setDate(new Date().getDate() - 6)),
         exercises: [{
             type: "resistance",
             name: "Bench Press",
@@ -61,7 +61,7 @@ let workoutSeed = [{
         }]
     },
     {
-        day: new Date().setDate(new Date().getDate() - 5),
+        day: new Date(new Date().setDate(new Date().getDate() - 5)),
         exercises: [{
             type: "resistance",
             name: "Bench Press",
@@ -91,6 +91,11 @@ let workoutSeed = [{
             weight: 300,
             reps: 10,
             sets: 4
+        }, {
+            type: "cardio",
+            name: "Running",
+            duration: 25,
+            distance: 4
         }]
     },
     {
